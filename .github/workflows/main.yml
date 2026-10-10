@@ -1,4 +1,3 @@
-
 name: Despliegue automatico a Surge
 
 on:
@@ -23,7 +22,7 @@ jobs:
         run: npm install --global surge
 
       - name: Publicar pagina
-        run: surge ./ "$SURGE_DOMAIN"
+        run: surge ./ publish "$SURGE_DOMAIN"
         env:
           SURGE_LOGIN: ${{ secrets.SURGE_LOGIN }}
           SURGE_TOKEN: ${{ secrets.SURGE_TOKEN }}
